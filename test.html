@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>MASUKKAN MARKAH ANDA</h2>
+    <input type="number" id="markah" placeholder="markah" min="0" required >
+    <button onclick="kiraMarkah()">Dapatkan</button>
+    <p id="Keputusan">keputusan</p>
+
+    <script>
+
+        //01. MULA
+        //02. MASUKKAN markah
+        //03. SEMAK Markah pengguna
+        //03a. 0<= Markah 40>=
+            //- Jika 0-49 (D) : PAPARKAN "Noob!"
+        //03b. 50<= Markah 69>= 
+            //- Jika 50-67 (C) : PAPARKAN "Teruskan Momentum!"
+        //03c. 70<= Markah 89>=
+            //- Jika 70-89 (B) : PAPARKAN "Sikit lagi, Teruskan!"
+        //03d. 100<= Markah 90>=
+            //- Jika 90-100 (A) : PAPARKAN "Tahniah!"
+        //04. TAMAT
+            
+
+        // If-Else Statement
+    function kiraMarkah() {
+        let number = document.getElementById('markah').value;   
+        let Keputusan;
+
+        //if (syarat 1)"Kalau syarat 1 true, baru dia akan execute code kat bawah iaitu 'A, Tahniah!'" {}
+        if (number >=90 && number <=100) {
+            Keputusan = 'A, Tahniah!';
+        }
+            //else if (syarat 2)
+            else if(number >=68 && number <=89) {
+                Keputusan = 'B, Sikit Lagi, Teruskan!';
+            }
+            else if(number >=50 && number <=67) {
+                Keputusan = 'C, Teruskan Momentum!';
+            }
+            else if(number >=0 && number <=49) {
+                Keputusan = 'D, Noob!';
+            }
+            else {
+                Keputusan = 'Invalid, Isi semula';
+            }
+            document.getElementById('Keputusan').innerText = "Keputusan: " + Keputusan;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kira Jumlah Harga</h2>
+    <input type="number" id="harga" placeholder="Harga Seunit">
+    <input type="number" id="kuantiti" placeholder="Kuantiti">
+    <button onclick="kiraHarga()">Kira</button>
+    <p id="jumlah"></p>
+
+    <input type="text" id="nama" placeholder="Nama">
+    <button onclick="tukaNama()">Tuka Nama</button>
+    <p id="namaOutput"></p>
+
+    <script>
+        function kiraHarga() {
+            let harga = document.getElementById("harga").value;
+            let kuantiti = document.getElementById("kuantiti").value;
+            let jumlah = harga * kuantiti;
+            document.getElementById("jumlah").innerHTML = "Jumlah Harga: " + jumlah
+        }
+
+        function tukaNama() {
+            let nama = document.getElementById("nama").value;
+            let result = nama.toUpperCase();
+
+            document.getElementById("namaOutput").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
