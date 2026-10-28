@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>array</title>
     <style>
         .carz {
             text-align: center;
@@ -20,11 +20,33 @@
         <h1>BAKAL KERETA DANISH</h1>
         <hr>
 
-        <input type="number" id="keretas" placeholder="Masukkan Nombor" required>
+        <!-- <input type="number" id="keretas" placeholder="Masukkan Nombor" required>
         <button onclick="bakalKereta()">KAPOW</button>
-        <p id="Keputusan"></p>
+        <p id="Keputusan"></p> -->
 
-        <script src="array.js"></script>
+        <!-- <script src="array.js"></script> -->
+        <script>
+            // let array = [1, 2, 3]; //declare array
+            // const array2 = ["apple", "oren", "asamboy"];
+            let namaPelajar = ["0", "1", "3", "4", "5"];
+
+            namaPelajar[0] = "Ferrari";
+            namaPelajar[1] = "Nissan";
+            namaPelajar[2] = "Koenigsegg";
+            namaPelajar[3] = "Mitsubishi";
+            namaPelajar[4] = "Lamborghini";
+            console.log(namaPelajar);
+            console.log(namaPelajar[1]);
+
+            namaPelajar.push("Proton");
+            namaPelajar.unshift("Volkswagen");
+            // namaPelajar.pop();
+            // namaPelajar.shift();
+            namaPelajar.sort();
+
+            // console.log(array[0])
+
+        </script>
     </div>
 </body>
 </html>
